@@ -10,6 +10,6 @@ data "terraform_remote_state" "platform" {
 
 resource "null_resource" "hello" {
   provisioner "local-exec" {
-    command = "echo ${data.terraform_remote_state.platform.random_pet}"
+    command = "echo ${data.terraform_remote_state.platform.outputs.random_pet}"
   }
 }
