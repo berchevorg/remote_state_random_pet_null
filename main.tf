@@ -33,8 +33,8 @@ resource "aws_security_group" "allow_tls" {
   
   
 
-# resource "null_resource" "hello" {
-#   provisioner "local-exec" {
-#     command = "echo ${data.terraform_remote_state.platform.outputs.random_pet}"
-#   }
-# }
+resource "null_resource" "hello" {
+  provisioner "local-exec" {
+    command = "echo ${data.terraform_remote_state.platform.outputs.random_pet}"
+  }
+}
