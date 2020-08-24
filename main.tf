@@ -3,7 +3,7 @@ data "terraform_remote_state" "platform" {
   config = {
     organization = "georgiman"
     workspaces = {
-      name = "remote_state_random_pet_null"
+      name = "random_pet_null"
     }
   }
 }
